@@ -1,11 +1,13 @@
-
 # (S)CSS Style Guide for *Gang of Five*
 
 We will be using SCSS (Sass) for our stylesheets.
 
 Based on the [Google CSS style guide](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#CSS_Style_Rules).
 
-# ID and Class Naming
+## File names
+ - Name your files using hyphens: `elephan.scss`, `original-name.scss`, and partials this way: `_ocean.scss`, `_banana-bread.css`.
+
+## ID and Class Naming
  - Use meaningless or generic names, depending on what you need to do.
  
     ~~~css
@@ -26,7 +28,7 @@ Based on the [Google CSS style guide](http://google-styleguide.googlecode.com/sv
     ~~~
  - Try to keep the names short. Abbreviations are ok.
 
-# Formatting
+## Formatting
  - Use lowercase for attributes and values.
     ~~~css
       /* Bad */
@@ -141,3 +143,55 @@ Based on the [Google CSS style guide](http://google-styleguide.googlecode.com/sv
       font-family: 'open sans', arial, sans-serif;
     }
     ~~~
+## SCSS
+These are SCSS-specific guidelines. Mostly based on this: http://css-tricks.com/sass-style-guide/.
+ - Do not commit CSS files into source control. Compiling the SCSS files is part of the deployment process.
+ 
+ - Use variables whenever it makes sense.
+    ~~~scss
+    $zHeader: 2000;
+    $zOverlay: 5000;
+    $zMessage: 5050;
+    $headerBg: #f00;
+    $messageText: #000;
+    
+    .header {
+      z-index: $zHeader;
+      background-color: $headerBg;
+    }
+    .overlay {
+      z-index: $zOverlay;
+    }
+    .message {
+      z-index: $zMessage;
+      color: $messageText;
+    }
+    ~~~
+ 
+ - List @extends first.
+ - List @includes next.
+ - List "regular" styles next.
+ - Nested selectors last.
+    ~~~scss
+    .weather {
+      @extends %module; 
+      @include transition(all 0.3s ease); // good, leverages cascade!
+      background: LightCyan;
+      > h3 {
+        @include transform(rotate(90deg));
+        border-bottom: 1px solid white;
+      }
+    }
+    ~~~
+
+ - Be generous with comments.
+
+ - Break into as many small files as makes sense.
+    ~~~scss
+    @import "global/header/header/";
+    @import "global/header/logo/";
+    @import "global/header/dropdowns/";
+    @import "global/header/nav/";
+    @import "global/header/really-specific-thingy/";
+    ~~~
+
