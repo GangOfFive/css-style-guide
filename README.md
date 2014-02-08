@@ -1,3 +1,11 @@
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [(S)CSS Style Guide for Gang of Five](#scss-style-guide-for-gang-of-five)
+	- [File names](#file-names)
+	- [ID and Class Naming](#id-and-class-naming)
+	- [Formatting](#formatting)
+	- [SCSS](#scss)
+
 # (S)CSS Style Guide for *Gang of Five*
 
 We will be using SCSS (Sass) for our stylesheets.
