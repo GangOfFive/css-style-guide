@@ -143,7 +143,9 @@ Based on the [Google CSS style guide](http://google-styleguide.googlecode.com/sv
       font-family: 'open sans', arial, sans-serif;
     }
     ~~~
+    
 ## SCSS
+
 These are SCSS-specific guidelines. Mostly based on this: http://css-tricks.com/sass-style-guide/.
  - Do not commit CSS files into source control. Compiling the SCSS files is part of the deployment process.
  
