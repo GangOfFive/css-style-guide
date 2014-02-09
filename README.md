@@ -6,49 +6,49 @@
 	- [Formatting](#formatting)
 	- [SCSS](#scss)
 
-# (S)CSS Style Guide for *Gang of Five*
+# Estándares de (S)CSS para *Gang of Five*
 
-We will be using SCSS (Sass) for our stylesheets.
+Se utilizará SCSS (Sass) para las hojas de estilo.
 
-Based on the [Google CSS style guide](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#CSS_Style_Rules).
+Esta guía está basada en [Google CSS style guide](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#CSS_Style_Rules).
 
-## File names
- - Name your files using hyphens: `elephan.scss`, `original-name.scss`, and partials this way: `_ocean.scss`, `_banana-bread.css`.
+## Nombres de archivo
+ - Se separan las palabras con guiones: `elephant.scss`, `original-name.scss`, y para los *partials* se antepone un guión bajo: `_ocean.scss`, `_banana-bread.css`.
 
-## ID and Class Naming
- - Use meaningless or generic names, depending on what you need to do.
+## IDs y Clases
+ - Se utilizarán nombres significativos o genéricos, dependiendo de lo que se ocupe hacer.
  
     ~~~css
-    /* Not recommended: meaningless */
+    /* No recomendado: no se entiende */
     #yee-1901 {}
     
-    /* Not recommended: presentational */
+    /* No recomendado: presentacional */
     .button-green {}
     .clear {}
-    /* Recommended: specific */
+    /* Recomendado: específico */
     #gallery {}
     #login {}
     .video {}
     
-    /* Recommended: generic */
+    /* Recomendado: genérico */
     .aux {}
     .alt {}
     ~~~
- - Try to keep the names short. Abbreviations are ok.
+ - Se deben utilizar nombres cortos siempre que sea posible. Utilizar abreviaciones está permitido.
 
-## Formatting
- - Use lowercase for attributes and values.
+## Formato
+ - Se utilizarán minúsculas para atributos y valores.
     ~~~css
-      /* Bad */
+      /* No recomendado */
       color: #E5E5E5;
-      /* Good */
+      /* Recomendado */
       color: #e5e5e5;
     ~~~
 
- - Use shorthand properties wherever possible.
+ - Se utilizará notación corta para las propiedades siempre que sea posible.
 
     ~~~css
-    /* Bad */
+    /* No recomendado */
     border-top-style: none;
     font-family: palatino, georgia, serif;
     font-size: 100%;
@@ -57,94 +57,90 @@ Based on the [Google CSS style guide](http://google-styleguide.googlecode.com/sv
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 0;
-    /* Good */
+    /* Recomendado */
     border-top: 0;
     font: 100%/1.6 palatino, georgia, serif;
     padding: 0 1em 2em;
     ~~~
     
- - Do not use units after 0 values unless they are required.
-
+ - No se deben especificar unidades para valores que sean `0` al menos que sean requeridos.
     ~~~css
     margin: 0;
     padding: 0;
     ~~~
 
- - Do not use put 0s in front of values or lengths between -1 and 1.
+ - No es necesario poner `0` antes del `.` para valores o longitudes entre `-1` y `1`.
 
     ~~~css
     font-size: .8em;
     ~~~
 
- - For color values that permit it, 3 character hexadecimal notation is shorter and more succinct.
+ - Para los colores que lo permitan, la notación hexadecimal de 3 caracteres es preferida.
 
     ~~~css
-    /* Bad */
+    /* No recomendado */
     color: #eebbcc;
-    /* Good */
+    /* Recomendado */
     color: #ebc;
     ~~~
- - Use a semicolon after every declaration.
+ - Se debe utilizar un punto y coma después de cada declaración.
 
     ~~~css
-    /* Bad */
+    /* No recomendado */
     .test {
       display: block;
       height: 100px
     }
-    /* Good */
+    /* Recomendado */
     .test {
       display: block;
       height: 100px;
     }
     ~~~
     
- - Always use a single space between property and value (but no space
-   between property and colon) for consistency reasons.
+ - Siempre colocar un espacio entre la propiedad y el valor, (pero no entre el valor y el punto y coma).
 
     ~~~css
-    /* Bad */
+    /* No recomendado */
     h3 {
       font-weight:bold;
     }
-    /* Good */
+    /* Recomendado */
     h3 {
       font-weight: bold;
     }
     ~~~
 
- - Always use a single space between the last selector and the opening brace
-   that begins the declaration block. The opening brace should be on the same
-   line as the last selector in a given rule.
+ - Utilizar siempre un espacio entre el último selector y el corchete que comienza el bloque
+   de declaraciones. El corchete debería estar en la misma línea que el último selector de una regla.
 
     ~~~css
-    /* Bad: missing space */
+    /* No recomendado: falta el espacio */
     #video{
       margin-top: 1em;
     }
     
-    /* Bad: unnecessary line break */
+    /* No recomendado: salto de línea innecesario */
     #video
     {
       margin-top: 1em;
     }
-    /* Good */
+    /* Recomendado */
     #video {
       margin-top: 1em;
     }
     ~~~
- - Use single ('') rather than double ("") quotation marks for
-   attribute selectors or property values. Do not use
-   quotation marks in URI values (url()).
+ - Utilizar comillas simples `''` en vez de dobles `""` para selectores de atributos o
+   valores de propiedades. No utilizar comillas para valores de URI `url()`.
 
     ~~~css
-    /* Bad */
+    /* No recomendado */
     @import url("css/maia.css");
     
     html {
       font-family: "open sans", arial, sans-serif;
     }
-    /* Good */
+    /* Recomendado */
     @import url(css/main.css);
     
     html {
@@ -154,10 +150,11 @@ Based on the [Google CSS style guide](http://google-styleguide.googlecode.com/sv
     
 ## SCSS
 
-These are SCSS-specific guidelines. Mostly based on this: http://css-tricks.com/sass-style-guide/.
- - Do not commit CSS files into source control. Compiling the SCSS files is part of the deployment process.
+Los siguientes son estándares específicos para SCSS. Basadas en: http://css-tricks.com/sass-style-guide/.
+ - No agregar archivos CSS al control de versines.
+   Compilar los archivos de SCSS es parte del proceso de desplegamiento.
  
- - Use variables whenever it makes sense.
+ - Utilizar variables siempre que tenga sentido.
     ~~~scss
     $zHeader: 2000;
     $zOverlay: 5000;
@@ -178,14 +175,14 @@ These are SCSS-specific guidelines. Mostly based on this: http://css-tricks.com/
     }
     ~~~
  
- - List @extends first.
- - List @includes next.
- - List "regular" styles next.
- - Nested selectors last.
+ - Listar reglas `@extends` primero.
+ - Listar reglas `@includes` después.
+ - Listar reglas "normales" después.
+ - Listar los selectores anidados de último.
     ~~~scss
     .weather {
       @extends %module; 
-      @include transition(all 0.3s ease); // good, leverages cascade!
+      @include transition(all 0.3s ease); // Recomendado
       background: LightCyan;
       > h3 {
         @include transform(rotate(90deg));
@@ -194,9 +191,9 @@ These are SCSS-specific guidelines. Mostly based on this: http://css-tricks.com/
     }
     ~~~
 
- - Be generous with comments.
+ - Ser generoso con los comentarios.
 
- - Break into as many small files as makes sense.
+ - Prefirir utilizar muchos archivos pequeños.
     ~~~scss
     @import "global/header/header/";
     @import "global/header/logo/";
@@ -205,14 +202,14 @@ These are SCSS-specific guidelines. Mostly based on this: http://css-tricks.com/
     @import "global/header/really-specific-thingy/";
     ~~~
 
- - Avoid overqualifying selectors https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS
+ - Evitar especificar demasiado los selectores: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS
      ~~~scss
-	// BAD
+	// No recomendado
 	button#backButton {…}
-	// BAD
+	// No recomendado
 	.menu-left#newMenuIcon {…}
-	// GOOD
+	// Recomendado
 	#backButton {…}
-	// GOOD
+	// Recomendado
 	#newMenuIcon {…}
     ~~~
