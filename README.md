@@ -66,6 +66,7 @@ Esta guía está basada en [Google CSS style guide](http://google-styleguide.goo
     ~~~
     
  - No se deben especificar unidades para valores que sean `0` al menos que sean requeridos.
+
     ~~~css
     margin: 0;
     padding: 0;
