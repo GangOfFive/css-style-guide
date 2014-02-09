@@ -34,10 +34,12 @@ Esta guía está basada en [Google CSS style guide](http://google-styleguide.goo
     .aux {}
     .alt {}
     ~~~
+
  - Se deben utilizar nombres cortos siempre que sea posible. Utilizar abreviaciones está permitido.
 
 ## Formato
  - Se utilizarán minúsculas para atributos y valores.
+
     ~~~css
       /* No recomendado */
       color: #E5E5E5;
@@ -155,6 +157,7 @@ Los siguientes son estándares específicos para SCSS. Basadas en: http://css-tr
    Compilar los archivos de SCSS es parte del proceso de desplegamiento.
  
  - Utilizar variables siempre que tenga sentido.
+    
     ~~~scss
     $zHeader: 2000;
     $zOverlay: 5000;
@@ -179,6 +182,7 @@ Los siguientes son estándares específicos para SCSS. Basadas en: http://css-tr
  - Listar reglas `@includes` después.
  - Listar reglas "normales" después.
  - Listar los selectores anidados de último.
+    
     ~~~scss
     .weather {
       @extends %module; 
@@ -194,6 +198,7 @@ Los siguientes son estándares específicos para SCSS. Basadas en: http://css-tr
  - Ser generoso con los comentarios.
 
  - Prefirir utilizar muchos archivos pequeños.
+
     ~~~scss
     @import "global/header/header/";
     @import "global/header/logo/";
@@ -202,7 +207,9 @@ Los siguientes son estándares específicos para SCSS. Basadas en: http://css-tr
     @import "global/header/really-specific-thingy/";
     ~~~
 
- - Evitar especificar demasiado los selectores: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS
+ - Evitar especificar demasiado los selectores:
+   https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS
+
      ~~~scss
 	// No recomendado
 	button#backButton {…}
