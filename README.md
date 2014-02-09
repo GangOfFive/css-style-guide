@@ -205,3 +205,14 @@ These are SCSS-specific guidelines. Mostly based on this: http://css-tricks.com/
     @import "global/header/really-specific-thingy/";
     ~~~
 
+ - Avoid overqualifying selectors https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS
+     ~~~scss
+	// BAD
+	button#backButton {…}
+	// BAD
+	.menu-left#newMenuIcon {…}
+	// GOOD
+	#backButton {…}
+	// GOOD
+	#newMenuIcon {…}
+    ~~~
