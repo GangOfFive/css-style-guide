@@ -154,7 +154,7 @@ Esta guía está basada en [Google CSS style guide](http://google-styleguide.goo
 ## SCSS
 
 Los siguientes son estándares específicos para SCSS. Basadas en: http://css-tricks.com/sass-style-guide/.
- - No agregar archivos CSS al control de versines.
+ - No agregar archivos CSS al control de versiones.
    Compilar los archivos de SCSS es parte del proceso de desplegamiento.
  
  - Utilizar variables siempre que tenga sentido.
