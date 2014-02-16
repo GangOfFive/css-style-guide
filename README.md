@@ -153,7 +153,9 @@ Esta guía está basada en [Google CSS style guide](http://google-styleguide.goo
     
 ## SCSS
 
-Los siguientes son estándares específicos para SCSS. Basadas en: http://css-tricks.com/sass-style-guide/.
+Los siguientes son estándares específicos para SCSS.
+Basados en: http://css-tricks.com/sass-style-guide/.
+
  - No agregar archivos CSS al control de versiones.
    Compilar los archivos de SCSS es parte del proceso de desplegamiento.
  
@@ -198,7 +200,7 @@ Los siguientes son estándares específicos para SCSS. Basadas en: http://css-tr
 
  - Ser generoso con los comentarios.
 
- - Prefirir utilizar muchos archivos pequeños.
+ - Preferir utilizar muchos archivos pequeños.
 
     ~~~scss
     @import "global/header/header/";
@@ -208,16 +210,15 @@ Los siguientes son estándares específicos para SCSS. Basadas en: http://css-tr
     @import "global/header/really-specific-thingy/";
     ~~~
 
- - Evitar especificar demasiado los selectores:
-   https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS
+ - [Evitar especificar demasiado los selectores](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS):
 
-     ~~~scss
-	// No recomendado
-	button#backButton {…}
-	// No recomendado
-	.menu-left#newMenuIcon {…}
-	// Recomendado
-	#backButton {…}
-	// Recomendado
-	#newMenuIcon {…}
+    ~~~scss
+	/* No recomendado */
+	button#backButton {...}
+	/* No recomendado */
+	.menu-left#newMenuIcon {...}
+	/* Recomendado */
+	#backButton {...}
+	/* Recomendado */
+	#newMenuIcon {...}
     ~~~
